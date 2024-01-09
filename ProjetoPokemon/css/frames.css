@@ -1,0 +1,217 @@
+
+/* ITW, Ano Letivo 2020/2021 */
+
+/* Grupo: 14, Número: 52975, Nome: Miguel Caras-Altas, PL: 23
+Grupo: 14, Número: 56906, Nome: Miguel Castro, PL: 23
+Grupo: 14, Número: 48207, Nome: Nuno Sousa, PL: 23 */
+
+
+
+#msg {
+    width: 90%;
+    height: 120%;
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 5;
+    z-index: 10;
+    justify-self: center;
+    align-self: center;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: rgba(9, 177, 255, 0.9);
+    position: relative;
+    margin-top: -70px;
+    padding: 15px;
+    font-family: "pokemon";
+    font-size: 17px;
+    line-height: 20px;
+}
+
+#spacebar {
+    width: 10%;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+}
+
+#spacebar_b {
+    width: 10%;
+    position: absolute;
+    right: 40%;
+    bottom: 0;
+}
+
+#battle {
+    grid-row: 1 / span 5;
+    grid-column: 1 / span 5;
+    height: 90%;
+    width: 90%;
+    z-index: 5;
+    position: relative;
+    border-style: solid;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-image: url('../images/battle_background.jpg');
+    background-size: cover;
+    background-color: rgb(137, 209, 153);
+}
+
+#b_p_i {
+    max-width: 100%;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    width: 90%;
+    height: 90%;
+    justify-self: right;
+    align-self: top;
+}
+
+#b_o_i {
+    max-width: 100%;
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    width: 90%;
+    height: 90%;
+    justify-self: left;
+    align-self: end;
+}
+
+#b_p_n {
+    max-width: 100%;
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    justify-self: center;
+    align-self: center;
+    font-family: "pokemon";
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9);
+    border-width: 3px;
+    border-radius: 20%;
+    padding: 20px;
+    background-color: rgb(137, 209, 153, 0.8);
+}
+
+#b_o_n {
+    max-width: 100%;
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    justify-self: center;
+    align-self: center;
+    font-family: "pokemon";
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9);
+    border-width: 3px;
+    border-radius: 20%;
+    padding: 20px;
+    background-color: rgb(137, 209, 153, 0.8);
+}
+
+#b_p_d {
+    max-width: 100%;
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+    font-family: "pokemon";
+    font-size: 40px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9);
+    border-width: 3px;
+    border-radius: 10%;
+    padding: 30px;
+    background-color: rgb(137, 209, 153, 0.8);
+}
+
+#b_o_d {
+    max-width: 100%;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    font-family: "pokemon";
+    font-size: 40px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9);
+    border-width: 3px;
+    border-radius: 10%;
+    padding: 30px;
+    background-color: rgb(137, 209, 153, 0.8);
+}
+
+#b_msg {
+    max-width: 100%;
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+    width: 85%;
+    height: 70%;
+    justify-self: center;
+    align-self: center;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: rgba(9, 177, 255, 0.8);
+    padding: 15px;
+    font-family: "pokemon";
+    font-size: 15px;
+    line-height: 20px;
+}
+
+#fight {
+    max-width: 100%;
+    grid-row: 3 / span 1;
+    grid-column: 3 / span 1;
+    width: 75%;
+    height: 75%;
+    justify-self: center;
+    align-self: center;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9);
+    border-width: 3px;
+    border-radius: 70%;
+    background-color: rgb(197, 26, 26, 0.8);
+    font-family: "pokemon";
+    font-size: 20px;
+}
+
+#results {
+    z-index: 2;
+    grid-row: 1 / span 5;
+    grid-column: 1 / span 5;
+    height: 70%;
+    width: 70%;
+    border-style: solid;
+    border-radius: 30px;
+    font-family: "pokemon";
+    position: relative;
+    margin: auto;
+    padding: 2%;
+    background: rgba(32, 186, 233, 0.95);
+    grid-template-areas: 'score score'
+                        'time time_v'
+                        'dftd dftd_v'
+                        'goal goal_v'
+                        'pnts pnts_v'
+                        'gotit gotit';
+}
+
+#results_t { grid-area: score; text-align: center;}
+#time { grid-area: time; text-align: left;}
+#time_v { grid-area: time_v; text-align: left;}
+#defeated { grid-area: dftd; text-align: left;}
+#defeated_v { grid-area: dftd_v; text-align: left;}
+#goal { grid-area: goal; text-align: left;}
+#goal_v { grid-area: goal_v; text-align: left;}
+#points { grid-area: pnts; text-align: left;}
+#points_v { grid-area: pnts_v; text-align: left;}
+#gotit { grid-area: gotit; text-align: center; font-size: 20px;}
+#gotit:hover { color: aqua;}
+
+

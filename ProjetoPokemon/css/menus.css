@@ -1,0 +1,311 @@
+
+/* ITW, Ano Letivo 2020/2021 */
+
+/* Grupo: 14, Número: 52975, Nome: Miguel Caras-Altas, PL: 23
+Grupo: 14, Número: 56906, Nome: Miguel Castro, PL: 23
+Grupo: 14, Número: 48207, Nome: Nuno Sousa, PL: 23 */
+
+#options {
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+    border-style: solid;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+}
+
+#login {
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+    border-style: solid;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+}
+
+#register {
+    margin: auto;
+    margin-top: 3%;
+    width: 50%;
+    border-style: solid;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+}
+
+#user_error, #pass_error, #user_login_error, #pass_login_error {
+    color: red; 
+    display: none; 
+    font-size: 15px;
+}
+
+#register select, #register input, #login input {width: 25%; height: 50%;}
+
+#register h3 {text-align: center;}
+
+#options h3:hover, #login h3:hover, #register h3:hover, 
+#back:hover, #main_menu p:hover, #pbb:hover, #lb:hover {color: aqua;}
+
+#welcome {
+    margin: auto;
+    margin-top: 10%;
+    width: 30%;
+    border-style: solid;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+    padding: 2%;
+}
+
+#welcome img {
+    margin: auto;
+    width: 45%;
+}
+
+#info {
+    right: 5%;
+    top: 30%;
+    width: 15%;
+    position: fixed;
+    border-style: solid;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+    padding: 2%;
+}
+
+#info img {
+    margin: auto;
+    width: 45%;
+}
+
+#score {
+    left: 5%;
+    top: 30%;
+    width: 15%;
+    position: fixed;
+    border-style: solid;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+    padding: 2%;
+}
+
+#clock {
+    text-align: left;
+    margin-left: 25%;
+}
+
+#main_menu {
+    margin: auto;
+    margin-top: 8%;
+    width: 40%;
+    border-style: solid;
+    border-radius: 30px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+}
+
+#main_menu h2, #mybest h2, #lead h2 {
+    font-size: 30px;
+}
+
+#main_menu p, #mybest p {
+    font-size: 23px;
+}
+
+#choice {
+    height: 40%;
+    width: 40%;
+    border-style: solid;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    background: rgba(32, 186, 233, 0.5);
+    padding: 2%;
+}
+
+h2 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 3;
+    font-family: "pokemon";
+    justify-self: center;
+}
+
+#charmander {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+}
+
+#squirtle {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+}
+
+#bulbasaur {
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+}
+
+#thisone {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3;
+}
+
+#back {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 3;
+}
+
+#mybest {
+    margin: auto;
+    margin-top: 10%;
+    width: 40%;
+    border-style: solid;
+    border-radius: 30px;
+    font-family: "pokemon";
+    font-size: 10px;
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+    display: grid;
+    grid-template-areas: "pbt pbt"
+                        "pbn1 pbs1"
+                        "pbn2 pbs2"
+                        "pbn3 pbs3"
+                        "pbn4 pbs4"
+                        "pbn5 pbs5"
+                         "pbb pbb";
+}
+
+#pbt { grid-area: pbt; }
+#pbn1 { grid-area: pbn1; text-align: center;}
+#pbn2 { grid-area: pbn2; text-align: center;}
+#pbn3 { grid-area: pbn3; text-align: center;}
+#pbn4 { grid-area: pbn4; text-align: center;}
+#pbn5 { grid-area: pbn5; text-align: center;}
+#pbs1 { grid-area: pbs1; text-align: left;}
+#pbs2 { grid-area: pbs2; text-align: left;}
+#pbs3 { grid-area: pbs3; text-align: left;}
+#pbs4 { grid-area: pbs4; text-align: left;}
+#pbs5 { grid-area: pbs5; text-align: left;}
+#pbb { grid-area: pbb;}
+
+
+
+#lead {
+    margin: auto;
+    margin-top: 5%;
+    width: 40%;
+    border-style: solid;
+    border-radius: 30px;
+    font-family: "pokemon";
+    background: rgba(32, 186, 233, 0.5);
+    text-align: center;
+    display: grid;
+    grid-template-areas: "lt lt lt"
+                    "ln1 lu1 ls1"
+                    "ln2 lu2 ls2"
+                    "ln3 lu3 ls3"
+                    "ln4 lu4 ls4"
+                    "ln5 lu5 ls5"
+                    "ln6 lu6 ls6"
+                    "ln7 lu7 ls7"
+                    "ln8 lu8 ls8"
+                    "ln9 lu9 ls9"
+                    "ln10 lu10 ls10"
+                    "lb lb lb";
+}
+
+#lt { grid-area: lt; }
+#ln1 { grid-area: ln1; text-align: center;}
+#ln2 { grid-area: ln2; text-align: center;}
+#ln3 { grid-area: ln3; text-align: center;}
+#ln4 { grid-area: ln4; text-align: center;}
+#ln5 { grid-area: ln5; text-align: center;}
+#ln6 { grid-area: ln6; text-align: center;}
+#ln7 { grid-area: ln7; text-align: center;}
+#ln8 { grid-area: ln8; text-align: center;}
+#ln9 { grid-area: ln9; text-align: center;}
+#ln10 { grid-area: ln10; text-align: center;}
+#lu1 { grid-area: lu1; text-align: left;}
+#lu2 { grid-area: lu2; text-align: left;}
+#lu3 { grid-area: lu3; text-align: left;}
+#lu4 { grid-area: lu4; text-align: left;}
+#lu5 { grid-area: lu5; text-align: left;}
+#lu6 { grid-area: lu6; text-align: left;}
+#lu7 { grid-area: lu7; text-align: left;}
+#lu8 { grid-area: lu8; text-align: left;}
+#lu9 { grid-area: lu9; text-align: left;}
+#lu10 { grid-area: lu10; text-align: left;}
+#ls1 { grid-area: ls1; text-align: left;}
+#ls2 { grid-area: ls2; text-align: left;}
+#ls3 { grid-area: ls3; text-align: left;}
+#ls4 { grid-area: ls4; text-align: left;}
+#ls5 { grid-area: ls5; text-align: left;}
+#ls6 { grid-area: ls6; text-align: left;}
+#ls7 { grid-area: ls7; text-align: left;}
+#ls8 { grid-area: ls8; text-align: left;}
+#ls9 { grid-area: ls9; text-align: left;}
+#ls10 { grid-area: ls10; text-align: left;}
+#lb { grid-area: lb; font-size: 25px;}
+
+
+
+@media screen and (max-width: 899px) {
+
+    #info {
+        top: 1%;
+        right: 18%;
+        width: 25%;
+        height: 18%;
+        font-size: 13px;
+        position: absolute;
+    }
+
+    #score {
+        top: 1%;
+        left: 18%;
+        width: 25%;
+        height: 18%;
+        font-size: 13px;
+        position: absolute;
+    }
+
+    #main_menu, #choice, #mybest, #lead {
+        margin-top: 30%;
+        width: 75%;
+    }
+
+    #login, #register, #options {
+        width: 75%;
+    }
+}
+
+

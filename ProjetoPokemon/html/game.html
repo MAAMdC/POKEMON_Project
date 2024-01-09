@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<!-- ITW, Ano Letivo 2020/2021 -->
+
+<!-- Grupo: 14, Número: 52975, Nome: Miguel Caras-Altas, PL: 23 -->
+<!-- Grupo: 14, Número: 56906, Nome: Miguel Castro, PL: 23 -->
+<!-- Grupo: 14, Número: 48207, Nome: Nuno Sousa, PL: 23 -->
+
+<html lang="pt">
+
+    <head>
+        <title>Game</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel='stylesheet' href="../css/board.css">
+        <link rel='stylesheet' href="../css/menus.css">
+        <link rel='stylesheet' href="../css/frames.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="../scripts/game.js"></script>
+    </head>
+
+    <body>
+
+        <audio id="step">
+            <source src="../media/step.mp3"></source>
+        </audio>
+
+        <nav id="options">
+            <h3><a onclick="goLogin()">Login</a></h3>
+            <hr>
+            <h3><a onclick="goRegister()">Register</a></h3>
+            <hr>
+            <h3><a href='start.html'>Back</a></h3>
+        </nav>
+
+        <div id="login" style="display: none;">
+            <form id='form_login'>
+                <br><br>
+                <label for="log_user">Username:</label>
+                <input type="text" id="log_user" name="user" required><br><br>
+                <p id='user_login_error'></p><hr><br>
+                <label for="log_pass">Password:</label>
+                <input type="password" id="log_pass" name="pass" required><br><br>
+                <p id='pass_login_error'></p>
+            </form>
+            <hr>
+            <h3 onclick="confirmLogin()">Confirm</h3>
+            <hr>
+            <h3><a href='game.html'>Back</a></h3>
+        </div>
+
+        <div id="register" style="display: none;">
+            <form id='form_register'>
+                <br><br>
+                <label for="reg_user">Username:</label>
+                <input type="text" id="reg_user" name="user" required><br><br>
+                <p id='user_error'></p><hr><br>
+                <label for="reg_mail">E-mail:</label>
+                <input type="text" id="reg_mail" name="mail" required><br><br><hr><br>
+                <label for="reg_pass">Password:</label>
+                <input type="password" id="reg_pass" name="pass" required><br><br><hr><br>
+                <label for="reg_pass_c">Confirm Password:</label>
+                <input type="password" id="reg_pass_c" name="pass_c" required><br><br>
+                <p id='pass_error'></p><hr><br>
+                <label for="reg_age">Birth Date:</label>
+                <input type="date" id="reg_date" name="age" required><br><br><hr><br>
+                <label for="reg_gender">Género: </label>
+                <select id="reg_gender" name="gender" required>
+                    <option value="Masculino" selected>Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select><br><br>
+            </form>
+            <hr>
+            <h3 onclick="confirmRegister()">Confirm</h3>
+            <hr>
+            <h3><a href='game.html'>Back</a></h3>
+        </div>
+
+        <section id='welcome' style="display: none;">
+            <p id='welcome_text'></p>
+            <img id='welcome_gif'>
+        </section>
+
+        <main id='main_menu' style="display: none;">
+            <h2>Pikachu Rescue</h2>
+            <hr>
+            <p onclick="startGame()">Start!</p>
+            <hr>
+            <p id='difficulty' onclick="changeDifficulty()">Difficulty: Normal</p>
+            <hr>
+            <p onclick="personalBest()">Personal Best</p>
+            <hr>
+            <p onclick="Leaderboard()">Leaderboard</p>
+            <hr>
+            <p><a href='start.html'>Back</a></p>
+            <hr>
+            <p id='logout' onclick="logOut()">Logout</p>
+        </main>
+
+        <section id='choice' style="display: none;">
+            <h2>Pick your starter:</h2>
+            <img src="../images/charmander.png" alt="charmander front view" id="charmander" 
+            onclick="Choice(1)" onmouseover="choiceText(1)"> 
+            <img src="../images/squirtle_front_right.png" alt="squirtle front view" id="squirtle" 
+            onclick="Choice(2)" onmouseover="choiceText(2)">
+            <img src="../images/bulbasaur_front_left.png" alt="bulbasaur front view" id="bulbasaur" 
+            onclick="Choice(3)" onmouseover="choiceText(3)">
+            <h2 id="thisone">Starter</h2>
+            <h2 id='back' onclick="location.reload()">Go Back</h2>
+        </section>
+
+        <aside id='score' style="display: none;">
+            <p id='timer'>Timer:</p>
+            <p id='clock'>0</p>
+            <p id='pokemon_defeated'>Pokémon Defeated:</p>
+            <p id='number_defeated'>0</p>
+        </aside>
+
+        <aside id='info' style="display: none;">
+            <p id='info_name'></p>
+            <img id='info_gif'>
+        </aside>
+
+        <div id='mybest' style="display: none;">
+            <h2 id='pbt'>Personal Best</h2>
+            <p id='pbn1'>1.</p><p id='pbs1'>0</p>
+            <p id='pbn2'>2.</p><p id='pbs2'>0</p>
+            <p id='pbn3'>3.</p><p id='pbs3'>0</p>
+            <p id='pbn4'>4.</p><p id='pbs4'>0</p>
+            <p id='pbn5'>5.</p><p id='pbs5'>0</p>
+            <p id='pbb'><a onclick="location.reload()">Back</a></p>
+        </div>
+
+        <div id='lead' style="display: none;">
+            <h2 id='lt'>Leaderboard</h2>
+            <p id='ln1'>1.</p><p id='lu1'>Ash</p><p id='ls1'>0</p>
+            <p id='ln2'>2.</p><p id='lu2'>Ash</p><p id='ls2'>0</p>
+            <p id='ln3'>3.</p><p id='lu3'>Ash</p><p id='ls3'>0</p>
+            <p id='ln4'>4.</p><p id='lu4'>Ash</p><p id='ls4'>0</p>
+            <p id='ln5'>5.</p><p id='lu5'>Ash</p><p id='ls5'>0</p>
+            <p id='ln6'>6.</p><p id='lu6'>Ash</p><p id='ls6'>0</p>
+            <p id='ln7'>7.</p><p id='lu7'>Ash</p><p id='ls7'>0</p>
+            <p id='ln8'>8.</p><p id='lu8'>Ash</p><p id='ls8'>0</p>
+            <p id='ln9'>9.</p><p id='lu9'>Ash</p><p id='ls9'>0</p>
+            <p id='ln10'>10.</p><p id='lu10'>Ash</p><p id='ls10'>0</p>
+            <p id='lb'><a onclick="location.reload()">Back</a></p>
+        </div>
+
+        <div id='board' style='display: none;'>
+
+            <div id='msg' style="display: none;">
+            </div>
+
+            <div id='battle' style="display: none;">
+                <img id='b_p_i'>
+                <img id='b_o_i'>
+                <h3 id='b_p_n'></h3>
+                <h3 id='b_o_n'></h3>
+                <h3 id='b_p_d'></h3>
+                <h3 id='b_o_d'></h3>
+                <div id='b_msg'></div>
+                <button id='fight'>FIGHT</button>
+            </div>
+
+            <div id='results' style="display: none;">
+                <h2 id='results_t'>Score</h2>
+                <p id='time'>Time:</p><p id='time_v'></p>
+                <p id='defeated'>Pokémon Defeated:</p><p id='defeated_v'></p>
+                <p id='goal'>Reached Pikachu?</p><p id='goal_v'></p>
+                <p id='points'>Final Score:</p><p id='points_v'></p>
+                <p id='gotit'><a></a></p>
+            </div>
+
+            <section id='mobile'>
+                <div id='up'><img src="../images/menus/up.png" class='mob_bttn'></div>
+                <div id='down'><img src="../images/menus/down.png" class='mob_bttn' ></div>
+                <div id='left'><img src="../images/menus/left.png" class='mob_bttn'></div>
+                <div id='right'><img src="../images/menus/right.png" class='mob_bttn'></div>
+                <div id='ok'><img src="../images/menus/ok.png" class='mob_bttn'></div>
+            </section>
+
+        </div>
+
+        <div id='board_animation' style="display: none;">
+        </div>
+        
+    </body>
+
+</html>
+
+
+

@@ -1,0 +1,138 @@
+
+/* ITW, Ano Letivo 2020/2021 */
+
+/* Grupo: 14, Número: 52975, Nome: Miguel Caras-Altas, PL: 23
+Grupo: 14, Número: 56906, Nome: Miguel Castro, PL: 23
+Grupo: 14, Número: 48207, Nome: Nuno Sousa, PL: 23 */
+
+
+
+@media screen and (max-width: 799px) {
+
+    #header_main {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        margin-top: 150px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-family: "pokemon";
+        text-align: center;
+    }
+
+    #options_start {
+        width: 90%;
+        border-style: solid;
+        border-radius: 30px;
+        font-size: 30px;
+        font-family: "pokemon";
+        background: rgba(32, 186, 233, 0.5);
+    }
+
+    #options_main {
+        display: inline-block;
+        position: absolute;
+        border-style: solid;
+        width: 90%;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-family: "pokemon";
+        background: rgba(32, 186, 233, 0.5);
+    }
+
+    #options_main ul {
+        margin: auto;
+        padding: 0;
+        
+    }
+    #options_main li {
+        float: left;
+    }
+
+    #options_main li a {
+        display: block;
+        padding: 1em;
+    }
+
+    li:hover {
+        list-style-type: '';
+        color: aqua;
+    }
+
+    #main_info {
+        position: relative;
+        left: 0px;
+        width: 100%;
+        border-style: solid;
+        border-radius: 20px;
+        font-family: 'pokemon';
+        background: rgba(32, 186, 233, 0.5);
+    }
+
+    .img_home {
+        width: 30%;
+        display: inline-block;
+        margin-left: 15%;
+    }
+
+
+    .pokemon_img {
+        width: 60%;
+        height: 60%;
+        border-style: solid;
+        border-radius: 20px;
+        display: inline-block;
+        margin-left: 20%;
+        margin-bottom: 20px;
+    }
+
+    .pokemon_bio{
+        border-style: solid;
+        width: 90%;
+        height: 90%;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+        margin-bottom: 0px;
+        padding: 20px;
+        text-align: justify;
+        line-height: 25px;
+    }
+
+    #main_info_grid {
+        position: relative;
+        left: 0px;
+        width: 100%;
+        border-style: solid;
+        border-radius: 20px;
+        font-family: 'pokemon';
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+        background: rgba(32, 186, 233, 0.5);
+    }
+    
+    .avatar {
+        border-style: solid;
+        padding: 2%;
+        margin-top: 20px;
+        border-radius: 20px;
+        width: 40%;
+        margin: auto;
+        grid-column: 1 / span 1;
+    }
+    
+    .developer {
+        border-style: solid;
+        position: static;
+        width: 80%;
+        margin:auto;
+        padding: 20px;
+        border-radius: 20px;
+        grid-column: 1 / span 1;
+    }
+
+}
